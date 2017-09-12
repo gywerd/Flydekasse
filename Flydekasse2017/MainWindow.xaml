@@ -1,0 +1,206 @@
+﻿<Window x:Class="Flydekasse2017.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Flydekasse2017"
+        mc:Ignorable="d"
+        Title="Float Box 2017"
+        Height="500"
+        Width="600"
+        ResizeMode="CanMinimize"
+        WindowStartupLocation="CenterScreen"
+        IsEnabled="True"
+        Closing="Window_Closing">
+    <Grid Margin="0,1,-0.4,-0.6">
+        <DockPanel>
+            <Menu x:Name="menu"
+                  HorizontalAlignment="Left"
+                  DockPanel.Dock="Top"
+                  Height="20"
+                  Margin="0,0,0,0"
+                  VerticalAlignment="Top"
+                  Width="113">
+                <MenuItem Header="_File">
+                    <MenuItem Header="_Exit"
+                              Click="MenuItemExit_Click" />
+                </MenuItem>
+                <MenuItem Header="_Tools">
+                    <MenuItem Header="_Manage materialData-file"
+                              Click="MenuItemManageMaterialDataFile_Click" />
+                </MenuItem>
+                <MenuItem Header="_Help">
+                    <MenuItem Header="_Help"
+                              Click="MenuItemHelp_Click" />
+                    <MenuItem Header="_About"
+                              Click="MenuItemAbout_Click" />
+                </MenuItem>
+            </Menu>
+        </DockPanel>
+        <Label x:Name="labelMaterialDataFrom"
+               Content="MaterialData source:"
+               HorizontalAlignment="Left"
+               Margin="35,30,0,0"
+               VerticalAlignment="Top" />
+        <RadioButton x:Name="radioButtonFile"
+                     Content="File"
+                     HorizontalAlignment="Left"
+                     Margin="35,60,0,0"
+                     VerticalAlignment="Top"
+                     Checked="radioButtonFile_Checked" />
+        <RadioButton x:Name="radioButtonDB"
+                     Content="DB"
+                     HorizontalAlignment="Left"
+                     Margin="85,60,0,0"
+                     VerticalAlignment="Top"
+                     Checked="radioButtonDB_Checked" />
+        <Label x:Name="labelChooseMaterial"
+               Content="Chose Material"
+               HorizontalAlignment="Left"
+               Margin="35,80,0,0"
+               VerticalAlignment="Top" />
+        <ComboBox x:Name="comboBoxMaterial"
+                  HorizontalAlignment="Left"
+                  ItemsSource="{Binding MaterialData}"
+                  DisplayMemberPath="strMaterialName"
+                  Margin="35,106,0,0"
+                  VerticalAlignment="Top"
+                  Width="210" />
+        <Label x:Name="labelThicknessInMM"
+               Content="Thickness in mm"
+               HorizontalAlignment="Left"
+               Margin="260,80,0,0"
+               VerticalAlignment="Top" />
+        <TextBox x:Name="textBoxThicknessInMM"
+                 HorizontalAlignment="Left"
+                 Height="23"
+                 Margin="260,106,0,0"
+                 TextWrapping="Wrap"
+                 Text="0"
+                 TextAlignment="Right"
+                 VerticalAlignment="Top"
+                 Width="80" />
+        <Button x:Name="buttonAddMaterial"
+                Content="Add Material to list"
+                HorizontalAlignment="Left"
+                FontSize="16"
+                Margin="35,150,0,0"
+                VerticalAlignment="Top"
+                Height="35"
+                Width="305"
+                Click="buttonAddMaterial_Click" />
+        <Label x:Name="labelHeightInM"
+               Content="Height in m"
+               HorizontalAlignment="Left"
+               Margin="35,200,0,0"
+               VerticalAlignment="Top" />
+        <TextBox x:Name="textBoxHeightInM"
+                 HorizontalAlignment="Left"
+                 Height="23"
+                 Margin="35,220,0,0"
+                 TextWrapping="Wrap"
+                 Text="0"
+                 TextAlignment="Right"
+                 VerticalAlignment="Top"
+                 Width="80" />
+        <Label x:Name="labelWidthInM"
+               Content="Width in m"
+               HorizontalAlignment="Left"
+               Margin="150,200,0,0"
+               VerticalAlignment="Top" />
+        <TextBox x:Name="textBoxWidthInM"
+                 HorizontalAlignment="Left"
+                 Height="23"
+                 Margin="150,220,0,0"
+                 TextWrapping="Wrap"
+                 Text="0"
+                 TextAlignment="Right"
+                 VerticalAlignment="Top"
+                 Width="80" />
+        <Label x:Name="labelDepthInM"
+               Content="Depth in m"
+               HorizontalAlignment="Left"
+               Margin="260,200,0,0"
+               VerticalAlignment="Top" />
+        <TextBox x:Name="textBoxDepthInM"
+                 HorizontalAlignment="Left"
+                 Height="23"
+                 Margin="260,220,0,0"
+                 TextWrapping="Wrap"
+                 Text="0"
+                 TextAlignment="Right"
+                 VerticalAlignment="Top"
+                 Width="80" />
+        <Button x:Name="buttonAddDimensions"
+                Content="Add Dimensions to list"
+                HorizontalAlignment="Left"
+                FontSize="16"
+                Margin="35,270,0,0"
+                VerticalAlignment="Top"
+                Height="35"
+                Width="305"
+                Click="buttonAddDimensions_Click" />
+        <Button x:Name="buttonMakeReport"
+                Content="Make the Report and Show it"
+                HorizontalAlignment="Left"
+                FontSize="16"
+                Margin="35,400,0,0"
+                VerticalAlignment="Top"
+                Height="35"
+                Width="305"
+                Click="buttonMakeReport_Click" />
+        <GroupBox x:Name="groupBoxSelectedMaterials"
+                  Header="Selected Materials"
+                  HorizontalAlignment="Left"
+                  Margin="365,28,0,0"
+                  VerticalAlignment="Top"
+                  Width="190"
+                  Height="170">
+            <Grid>
+                <ListView x:Name="SelectedMaterials"
+                          ItemsSource="{Binding ChosenMaterialData}"
+                          HorizontalAlignment="Left"
+                          VerticalAlignment="Top">
+                    <ListView.View>
+                        <GridView x:Name="grdSelectedMaterials">
+                            <GridViewColumn Header="Material"
+                                            Width="80"
+                                            DisplayMemberBinding="{Binding strMaterialName}" />
+                            <GridViewColumn Header="Thickness (mm)"
+                                            Width="90"
+                                            DisplayMemberBinding="{Binding strMaterialThickness}" />
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </Grid>
+        </GroupBox>
+        <GroupBox x:Name="groupBoxCalculationValues"
+                  Header="Calculation Values"
+                  HorizontalAlignment="Left"
+                  Margin="365,203,0,0"
+                  VerticalAlignment="Top"
+                  Width="190"
+                  Height="229">
+            <Grid>
+                <ListView x:Name="CalculationValues"
+                          ItemsSource="{Binding BoxData}"
+                          HorizontalAlignment="Left"
+                          VerticalAlignment="Top">
+                    <ListView.View>
+                        <GridView x:Name="grdCalculationValues">
+                            <GridViewColumn Header="Height (m)"
+                                            Width="63"
+                                            DisplayMemberBinding="{Binding decBoxHeight}" />
+                            <GridViewColumn Header="Width(m)"
+                                            Width="55"
+                                            DisplayMemberBinding="{Binding decBoxWidth}" />
+                            <GridViewColumn Header="Depth (m)"
+                                            Width="60"
+                                            DisplayMemberBinding="{Binding decBoxDepth}" />
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>

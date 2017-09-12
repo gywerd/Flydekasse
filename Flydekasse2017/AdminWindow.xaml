@@ -1,0 +1,105 @@
+﻿<Window x:Class="Flydekasse2017.AdminWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Flydekasse2017"
+        mc:Ignorable="d"
+        Title="Material Data - Administration"
+        Height="300"
+        Width="600"
+        ResizeMode="CanMinimize"
+        WindowStartupLocation="CenterScreen"
+        Closing="Window_Closing">
+    <Grid>
+        <Button x:Name="buttonUpdateMaterial"
+                Content="Update Material"
+                HorizontalAlignment="Left"
+                Margin="20,105,0,0"
+                VerticalAlignment="Top"
+                Width="280"
+                Click="buttonUpdateMaterial_Click"
+                Visibility="Hidden" />
+        <Button x:Name="buttonRemoveMaterial"
+                Content="Remove Material"
+                HorizontalAlignment="Left"
+                Margin="20,170,0,0"
+                VerticalAlignment="Top"
+                Width="280"
+                Click="buttonRemoveMaterial_Click"
+                Visibility="Hidden" />
+        <Button x:Name="buttonUpdateFile"
+                Content="Update File"
+                HorizontalAlignment="Left"
+                Margin="20,105,0,0"
+                VerticalAlignment="Top"
+                Width="280"
+                Click="buttonUpdateFile_Click"
+                Visibility="Hidden" />
+        <Button x:Name="buttonAddMaterial"
+                Content="Add Material"
+                HorizontalAlignment="Left"
+                Margin="20,235,0,0"
+                VerticalAlignment="Top"
+                Width="280"
+                Click="buttonAddMaterial_Click" />
+        <Label x:Name="labelMaterial"
+               Content="Material:"
+               HorizontalAlignment="Left"
+               Margin="20,15,0,0"
+               Height="27"
+               Width="115"
+               VerticalAlignment="Top" />
+        <TextBox x:Name="textBoxMaterial"
+                 HorizontalAlignment="Left"
+                 Height="23"
+                 Margin="145,20,0,0"
+                 TextWrapping="Wrap"
+                 Text="{Binding strMaterialName}"
+                 VerticalAlignment="Top"
+                 Width="155" />
+        <Label x:Name="labelWeightPerM3"
+               Content="Weight per m3 (Kg):"
+               HorizontalAlignment="Left"
+               Margin="20,55,0,0"
+               Height="27"
+               Width="115"
+               VerticalAlignment="Top" />
+        <TextBox x:Name="textBoxWeightPerM3"
+                 HorizontalAlignment="Left"
+                 Height="23"
+                 Margin="145,60,0,0"
+                 TextWrapping="Wrap"
+                 Text="{Binding strMaterialWeight}"
+                 VerticalAlignment="Top"
+                 Width="155" />
+        <GroupBox x:Name="groupBox"
+                  Header="Material Data"
+                  HorizontalAlignment="Left"
+                  Margin="320,10,0,0"
+                  Height="250"
+                  Width="250"
+                  VerticalAlignment="Top">
+            <Grid>
+                <ListView x:Name="listMaterialData"
+                          ItemsSource="{Binding MaterialData}"
+                          HorizontalAlignment="Left"
+                          VerticalAlignment="Top"
+                          SelectionChanged="listMaterialData_SelectionChanged">
+                    <ListView.View>
+                        <GridView x:Name="grdMaterialData">
+                            <GridViewColumn Header="Material"
+                                            Width="100"
+                                            DisplayMemberBinding="{Binding strMaterialName}" />
+                            <GridViewColumn Header="Weight per m3 (Kg)"
+                                            Width="130"
+                                            DisplayMemberBinding="{Binding strMaterialWeight}" />
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </Grid>
+
+        </GroupBox>
+
+    </Grid>
+</Window>
