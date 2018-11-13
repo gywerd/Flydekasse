@@ -1,0 +1,17 @@
+C:\CodeMappe\S1_F_2007\Database\AspITDBClassLibrary\AspITDBClassLibrary\bin\Debug\AspITDBClassLibrary.dll
+C:\CodeMappe\S1_F_2007\Database\AspITDBClassLibrary\AspITDBClassLibrary\bin\Debug\AspITDBClassLibrary.pdb
+C:\CodeMappe\S1_F_2007\Database\AspITDBClassLibrary\AspITDBClassLibrary\obj\Debug\AspITDBClassLibrary.csprojResolveAssemblyReference.cache
+C:\CodeMappe\S1_F_2007\Database\AspITDBClassLibrary\AspITDBClassLibrary\obj\Debug\AspITDBClassLibrary.dll
+C:\CodeMappe\S1_F_2007\Database\AspITDBClassLibrary\AspITDBClassLibrary\obj\Debug\AspITDBClassLibrary.pdb
+C:\Users\bern0145\OneDrive for Business\Mål og evalueringer\Software konstruktion\Dagsplaner S1\Opgaver\Codemappe_S1_F_2017\Database\AspITDBClassLibrary\AspITDBClassLibrary\bin\Debug\AspITDBClassLibrary.dll
+C:\Users\bern0145\OneDrive for Business\Mål og evalueringer\Software konstruktion\Dagsplaner S1\Opgaver\Codemappe_S1_F_2017\Database\AspITDBClassLibrary\AspITDBClassLibrary\bin\Debug\AspITDBClassLibrary.pdb
+C:\Users\bern0145\OneDrive for Business\Mål og evalueringer\Software konstruktion\Dagsplaner S1\Opgaver\Codemappe_S1_F_2017\Database\AspITDBClassLibrary\AspITDBClassLibrary\obj\Debug\AspITDBClassLibrary.csprojResolveAssemblyReference.cache
+C:\Users\bern0145\OneDrive for Business\Mål og evalueringer\Software konstruktion\Dagsplaner S1\Opgaver\Codemappe_S1_F_2017\Database\AspITDBClassLibrary\AspITDBClassLibrary\obj\Debug\AspITDBClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\bern0145\OneDrive for Business\Mål og evalueringer\Software konstruktion\Dagsplaner S1\Opgaver\Codemappe_S1_F_2017\Database\AspITDBClassLibrary\AspITDBClassLibrary\obj\Debug\AspITDBClassLibrary.dll
+C:\Users\bern0145\OneDrive for Business\Mål og evalueringer\Software konstruktion\Dagsplaner S1\Opgaver\Codemappe_S1_F_2017\Database\AspITDBClassLibrary\AspITDBClassLibrary\obj\Debug\AspITDBClassLibrary.pdb
+C:\Users\bern0145\Source\Repos\Flydekasse\AspITDBClassLibrary\AspITDBClassLibrary\bin\Debug\AspITDBClassLibrary.dll
+C:\Users\bern0145\Source\Repos\Flydekasse\AspITDBClassLibrary\AspITDBClassLibrary\bin\Debug\AspITDBClassLibrary.pdb
+C:\Users\bern0145\Source\Repos\Flydekasse\AspITDBClassLibrary\AspITDBClassLibrary\obj\Debug\AspITDBClassLibrary.csprojAssemblyReference.cache
+C:\Users\bern0145\Source\Repos\Flydekasse\AspITDBClassLibrary\AspITDBClassLibrary\obj\Debug\AspITDBClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\bern0145\Source\Repos\Flydekasse\AspITDBClassLibrary\AspITDBClassLibrary\obj\Debug\AspITDBClassLibrary.dll
+C:\Users\bern0145\Source\Repos\Flydekasse\AspITDBClassLibrary\AspITDBClassLibrary\obj\Debug\AspITDBClassLibrary.pdb

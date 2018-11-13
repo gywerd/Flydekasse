@@ -108,7 +108,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Database\AspITDBClassLibrary\AspITDBClassLibrary\AspITDBClassLibrary.csproj">
+    <ProjectReference Include="..\AspITDBClassLibrary\AspITDBClassLibrary\AspITDBClassLibrary.csproj">
       <Project>{1aaed803-e59f-4d61-b875-8fcb61c3e064}</Project>
       <Name>AspITDBClassLibrary</Name>
     </ProjectReference>

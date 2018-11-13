@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2016
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flydekasse2017", "Flydekasse2017\Flydekasse2017.csproj", "{D4D39BD3-71EE-4E55-B629-D3A96915BE63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspITDBClassLibrary", "..\..\Database\AspITDBClassLibrary\AspITDBClassLibrary\AspITDBClassLibrary.csproj", "{1AAED803-E59F-4D61-B875-8FCB61C3E064}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspITDBClassLibrary", "AspITDBClassLibrary\AspITDBClassLibrary\AspITDBClassLibrary.csproj", "{1AAED803-E59F-4D61-B875-8FCB61C3E064}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,5 +24,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {48E386C2-7020-4921-8A70-573C8C823029}
 	EndGlobalSection
 EndGlobal

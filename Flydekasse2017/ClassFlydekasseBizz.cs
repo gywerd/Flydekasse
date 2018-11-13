@@ -14,27 +14,40 @@ namespace Flydekasse2017
 {
     class ClassFlydekasseBizz : INotifyPropertyChanged
     {
-        /// <summary>
-        /// Declaration of global data types
-        /// </summary>
-        public string strMaterialDataSource = "FILE";
-        //public static string myServerAddress = @"CV-BB-5478\SQLEKSPRESS";
-        //public static string myDatabase = "Test22";
-        public static string strCon = @"Server=CV-BB-5478\SQLEXPRESS;Database=Test22;Trusted_Connection=True";
+        #region Fields
+        public string strMaterialDataSource = @"FILE";
+        public static string myServerAddress = @"CV-BB-5478\SQLEKSPRESS";
+        public static string myDatabase = @"Test22";
+        public static string strCon = @"Server=" + myServerAddress + @";Database=" + @";Trusted_Connection=True";
 
-        /// <summary>
-        /// Declaration of global classes
-        /// </summary>
         public ClassMaterial CM = new ClassMaterial();
         public ClassBox CB = new ClassBox();
         public Class_YourProjectname CYP = new Class_YourProjectname(strCon);
         public DbConn DBC = new DbConn();
-        ClassFileHandler CFH = new ClassFileHandler();
+        public ClassFileHandler CFH = new ClassFileHandler();
 
-        /// <summary>
-        /// ObservableCoollection containing data on box dimensions
-        /// </summary>
         ObservableCollection<ClassBox> boxData = new ObservableCollection<ClassBox>();
+        ObservableCollection<ClassMaterial> materialData = new ObservableCollection<ClassMaterial>();
+        ObservableCollection<ClassMaterial> chosenMaterialData = new ObservableCollection<ClassMaterial>();
+        #endregion
+
+        #region Constructors
+        /// <summary>
+        /// Empty Constructor
+        /// </summary>
+        public ClassFlydekasseBizz()
+        {
+
+        }
+
+        #endregion
+
+        #region Events
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        #endregion
+
+        #region Properties
         public ObservableCollection<ClassBox> BoxData
         {
             get
@@ -43,10 +56,6 @@ namespace Flydekasse2017
             }
         }
 
-        /// <summary>
-        /// ObservableCoollection containing data on available box materials from file
-        /// </summary>
-        ObservableCollection<ClassMaterial> materialData = new ObservableCollection<ClassMaterial>();
 
         public ObservableCollection<ClassMaterial> MaterialData
         {
@@ -60,13 +69,6 @@ namespace Flydekasse2017
             }
         }
 
-        /// <summary>
-        /// ObservableCollection containing data on materials chosen
-        /// </summary>
-        ObservableCollection<ClassMaterial> chosenMaterialData = new ObservableCollection<ClassMaterial>();
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
         public ObservableCollection<ClassMaterial> ChosenMaterialData
         {
             get
@@ -76,14 +78,9 @@ namespace Flydekasse2017
         }
 
 
-        /// <summary>
-        /// The Class Flydekasse Business layer
-        /// </summary>
-        public ClassFlydekasseBizz()
-        {
+        #endregion
 
-        }
-
+        #region Methods
         /// <summary>
         /// Method, that load material data from file
         /// </summary>
@@ -128,6 +125,9 @@ namespace Flydekasse2017
             }
         }
 
+        /// <summary>
+        /// Method, that clears Material Data Collection
+        /// </summary>
         public void ClearMaterialData()
         {
             materialData.Clear();
@@ -210,6 +210,9 @@ namespace Flydekasse2017
             CM.ClearAllData();
         }
 
+        /// <summary>
+        /// Method, that Updates content of Material Data Collection
+        /// </summary>
         public void UpdateMaterial()
         {
             ClassMaterial cm = MaterialData.FirstOrDefault(Cm => Cm.strMaterialName == CM.strMaterialName);
@@ -423,6 +426,8 @@ namespace Flydekasse2017
         {
             CM.RefreshData(cm);
         }
+
+        #endregion
 
     }
 }

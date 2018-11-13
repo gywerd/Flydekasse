@@ -13,23 +13,30 @@ namespace Flydekasse2017
 {
     public class ClassMaterial : INotifyPropertyChanged
     {
-        //Declaration of public data types
+        #region Fields
         private string _strMaterialName;
         private string _strMaterialWeight;
         private string _strMaterialThickness;
 
-        /// <summary>
-        /// Eventhandler
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
+        #endregion
 
-        //Declaration of the material class
+        #region Constructors
+        /// <summary>
+        /// Empty Constructor
+        /// </summary>
         public ClassMaterial()
         {
 
         }
 
-        //entity of field
+        #endregion
+
+        #region Events
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        #endregion
+
+        #region Properties
         public string strMaterialName
         {
             get
@@ -46,7 +53,6 @@ namespace Flydekasse2017
             }
         }
 
-        //entity of field
         public string strMaterialWeight
         {
             get
@@ -63,7 +69,6 @@ namespace Flydekasse2017
             }
         }
 
-        //entity of field
         public string strMaterialThickness
         {
             get
@@ -80,7 +85,13 @@ namespace Flydekasse2017
             }
         }
 
-        //Method, that notify about changed properties
+        #endregion
+
+        #region Methods
+        /// <summary>
+        /// Method, that notify about changed properties
+        /// </summary>
+        /// <param name="v">string</param>
         private void Notify(string v)
         {
             {
@@ -91,7 +102,10 @@ namespace Flydekasse2017
             }
         }
 
-        //Method, that generates MaterialData
+        /// <summary>
+        /// Method, that generates MaterialData
+        /// </summary>
+        /// <param name="cm">ClassMaterial</param>
         public ClassMaterial(ClassMaterial cm)
         {
             if(cm != null)
@@ -101,7 +115,11 @@ namespace Flydekasse2017
             }
         }
 
-        //Method, thad generates ChosenMaterialData 
+        /// <summary>
+        /// Method, thad generates ChosenMaterialData
+        /// </summary>
+        /// <param name="cm">ClassMaterial</param>
+        /// <param name="strThickness">string</param>
         public ClassMaterial(ClassMaterial cm, string strThickness)
         {
             if (cm != null)
@@ -112,6 +130,9 @@ namespace Flydekasse2017
             }
         }
 
+        /// <summary>
+        /// Method, that clears data in Fields
+        /// </summary>
         public void ClearAllData()
         {
             this.strMaterialName = "";
@@ -128,6 +149,8 @@ namespace Flydekasse2017
             this.strMaterialName = cm.strMaterialName;
             this.strMaterialWeight = cm.strMaterialWeight;
         }
+
+        #endregion
     }
 }
 
